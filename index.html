@@ -14,22 +14,45 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </head>
-<body class="container">
-    <header>
-        <h1>My Weather Application</h1>
+<body>
+    <header class="bg-info">
+        <nav class="navbar navbar-expand">
+            <div class="container">
+                <a href="#" class="navbar-brand"><img id="logo" src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt=""></a>
+                <h1>My Weather Application</h1>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
-        <div id="form-container" class="input-group">
-            <form class="form-floating">
-                <input id="location-search" class="form-control" type="text" placeholder="Location here" name="">
-                <label class="form-label" for="location-input">city, zip code, IP adress...</label>
-            </form>
-            <button id="submit" class="btn btn-primary btn-sm" type="submit">Search</button>
-
-        </div>
-        <div id="weather-info">
-            
-        </div>
+    <main class="container mt-5">
+        <section>
+            <h2 class="d-flex justify-content-center">Please select whether you want temperature in celsius or fahrenheit</h2>
+            <div class="btn-group d-flex justify-content-end">
+                <button id="celsius" class="btn btn-outline-danger" type="click">°C</button>
+                <button id="fahrenheit" class="btn btn-outline-warning" type="click">°F</button>
+            </div>
+        </section><br>
+        <section>
+            <div id="form-container" class="input-group">
+                <form class="form-floating">
+                    <input id="location-search" class="form-control" type="text" placeholder="Location here" name="">
+                    <label class="form-label" for="location-input">city, zip code, IP adress...</label>
+                </form>
+                <button id="submit" class="btn btn-primary btn-sm" type="click">Search</button>
+                <button class="btn btn-danger" id="clear-button">Clear all</button>
+            </div><br>
+            <article>
+                <div id="weather-info" class="d-flex justify-content-center justify-content-around flex-wrap"></div>
+            </article>
+        </section>
     </main>
     <footer></footer>
 </body>
